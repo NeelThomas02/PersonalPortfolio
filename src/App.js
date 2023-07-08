@@ -7,7 +7,7 @@ import Project from './Components/Projects/Project';
 
 function App() {
   return (
-    <div>
+    <div className='app'>
       <Navbar />
       <Hero />
       <About />
