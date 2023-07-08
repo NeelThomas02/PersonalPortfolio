@@ -1,0 +1,109 @@
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background: transparent;
+    backdrop-filter: blur(10px);
+}
+
+.image{
+    width: 80px;
+    height: 80px;
+    border-radius: 80%;
+}
+
+.navbar ul{
+    list-style: none;
+}
+
+.navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.navbar ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color: #80ea5e;
+    display: block;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover{
+    color: #81ea5e7b;
+    scale: 1.2;
+}
+
+.navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: transparent;
+    display: none;
+}
+
+.navbar ul li ul li{
+    width: 100%;
+    /* border-top: 1px solid rgba(0,0,0.1); */
+}
+
+.navbar ul li:focus-within > ul,
+.navbar ul li:hover > ul{
+    display: initial;
+}
+
+#menu-bar{
+    display: none;
+}
+
+.navbar label{
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+
+@media(max-width:991px){
+
+    .navbar{
+        padding: 20px;
+    }
+
+    .navbar label{
+        display: initial;
+    }
+
+    .navbar .nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+        display: none;
+    }
+
+    .navbar .nav ul li{
+        width: 100%;
+    }
+
+    .navbar .nav ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    .navbar .nav ul li ul li{
+        background-color: white;
+    }
+
+    #menu-bar:checked ~ .nav{
+        display: initial;
+    }
+}
