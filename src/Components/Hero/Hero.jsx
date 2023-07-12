@@ -4,7 +4,7 @@ import './Hero.css';
 
 const Hero = () => {
   return (
-    <div>
+    <div className='home'>
       <Parallax strength={600} bgImage='chess-1215079_1280.jpg'>
         <div id='home' className='content'>
           <div className='text-content'>
